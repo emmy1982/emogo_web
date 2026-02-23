@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSORIAL STUDIO | Web Design & Portfolio</title>
+    <!-- Google Fonts: Syne and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section class="navbar-section">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Logo">
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-links">
+            <a href="#work" class="menu-link">Trabajo</a>
+            <a href="#services" class="menu-link">Servicios</a>
+            <a href="#studio" class="menu-link">Estudio</a>
+            <a href="#contact" class="menu-link btn-contact-overlay">Hablemos</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <!-- Hero Background Carousel -->
+            <div class="hero-bg-slider" id="heroBgSlider">
+                <div class="hero-bg-slide active"
+                    style="background-image: url('https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?w=1920&q=80');">
+                </div>
+                <div class="hero-bg-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=1920&q=80');">
+                </div>
+                <div class="hero-bg-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1920&q=80');">
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+
+            <!-- Circular Text Animation -->
+            <div class="circular-text">
+                <svg viewBox="0 0 200 200">
+                    <path id="circlePath" fill="none"
+                        d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                    <text>
+                        <textPath href="#circlePath" startOffset="0%">
+                            DISEÑO WEB • PORTFOLIOS PROFESIONALES • SOCIAL MEDIA •
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+            <div class="circular-text2">
+                <svg viewBox="0 0 200 200">
+                    <path id="circlePath" fill="none"
+                        d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                    <text>
+                        <textPath href="#circlePath" startOffset="0%">
+                            DISEÑO WEB • PORTFOLIOS PREMIUM• SOCIAL MEDIA •
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+
+            <div class="hero-top-line"></div>
+            <div class="hero-content">
+                <div class="hero-left">
+                    <p class="hero-subtitle"><span class="animacion_parpadeo">_</span>Diseño Web</p>
+                </div>
+                <div class="hero-right">
+                    <h1 class="hero-title">
+                        <span><span class="animacion_parpadeo">_</span>CREAMOS</span>
+                        <span class="indent">EXPERIENCIAS</span>
+                        <span>DIGITALES</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="hero-bottom">
+                <p class="hero-description">Especialistas en la creación de <strong>páginas web</strong>,
+                    <strong>portfolios
+                        profesionales</strong> e
+                    <strong>imágenes para social media</strong> con un enfoque editorial y minimalista.
+                </p>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="section-header reveal">
+                <h2><span class="animacion_parpadeo">_</span>¿Qué hacemos?</h2>
+                <span class="section-count">.01</span>
+            </div>
+
+            <ul class="services-list">
+                <li class="service-item reveal">
+                    <div class="service-info">
+                        <h3>Diseño Web</h3>
+                        <p>Diseño web asimétrico, ultra moderno y premium.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+                <li class="service-item reveal">
+                    <div class="service-info">
+                        <h3>Portfolios</h3>
+                        <p>Exhibición minimalista para creativos de alto impacto.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+                <li class="service-item reveal">
+                    <div class="service-info">
+                        <h3>Social Media</h3>
+                        <p>Dirección de arte premium para potenciar tus redes.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="work">
+            <div class="section-header reveal">
+                <h2><span class="animacion_parpadeo">_</span>Selección de proyectos</h2>
+                <span class="section-count">.02</span>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Item 1 - Left -->
+                <div class="portfolio-item reveal">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
+                        alt="Interior editorial style">
+                    <div class="item-overlay">
+                        <h4>Maison Noir</h4>
+                        <p>E-commerce design focusing on luxury interiors and seamless user experience.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 - Center (Taller) -->
+                <div class="portfolio-item img-tall reveal">
+                    <img src="https://images.unsplash.com/photo-1490127252417-7c393f993ee4?w=800&q=80"
+                        alt="Fashion editorial">
+                    <div class="item-overlay">
+                        <h4>Aura</h4>
+                        <p>Complete brand identity and web presence for a high-end fashion label.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 - Right -->
+                <div class="portfolio-item reveal">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80"
+                        alt="Workspace editorial">
+                    <div class="item-overlay">
+                        <h4>Oasis</h4>
+                        <p>Minimalist portfolio showcasing creative workspaces globally.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 - Left -->
+                <div class="portfolio-item reveal">
+                    <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&q=80"
+                        alt="Architecture editorial">
+                    <div class="item-overlay">
+                        <h4>Vestige</h4>
+                        <p>Web design and 3D visualization for modern architectural firm.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 - Center (Taller) -->
+                <div class="portfolio-item img-tall reveal">
+                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80"
+                        alt="Art editorial">
+                    <div class="item-overlay">
+                        <h4>Gallery</h4>
+                        <p>Virtual exhibition platform highlighting contemporary art pieces.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 - Right -->
+                <div class="portfolio-item reveal">
+                    <img src="https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?w=800&q=80"
+                        alt="Editorial layout">
+                    <div class="item-overlay">
+                        <h4>Studio</h4>
+                        <p>Digital magazine format for an independent publishing house.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-top reveal">
+                <div class="footer-cta">
+                    <h2><span class="animacion_parpadeo">_</span>¿Listo para elevar<br>tu marca?</h2>
+                    <a href="mailto:hello@sensorial.studio" class="email-link">hello@sensorial.studio</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <!-- <a href="#">Awwwards</a> -->
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sensorial Studio. All rights reserved.</p>
+            </div>
+            <div class="footer-bg-text">emogo</div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

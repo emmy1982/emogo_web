@@ -511,6 +511,7 @@ strong {
     grid-auto-flow: dense;
     gap: 2rem;
     margin-top: 4rem;
+    align-items: center;
 }
 
 .portfolio-item {
@@ -524,7 +525,7 @@ strong {
 
 /* Make middle column items taller */
 .portfolio-item:nth-child(3n+2) {
-    aspect-ratio: 3/5;
+    aspect-ratio: 3.5/5;
     transform: translateY(-2rem);
     /* Slight offset for asymmetry */
 }

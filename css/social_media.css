@@ -1,0 +1,47 @@
+/* Hero overlay with a slightly warmer tint for Social Media mood */
+.hero-inner .hero-overlay {
+    background: rgba(8, 8, 18, 0.70);
+}
+
+/* Gallery items — square-ish for social media grid feel */
+.gallery-item {
+    height: 560px;
+}
+
+.gallery-item.tall {
+    height: 660px;
+    transform: translateY(-2.5rem);
+}
+
+/* Stronger gradient so text pops over colourful social media imagery */
+.gallery-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 58%);
+}
+
+.gallery-overlay .gallery-tag {
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.14em;
+}
+
+.gallery-item:hover .gallery-overlay .gallery-tag {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+
+    .gallery-item,
+    .gallery-item.tall {
+        height: 440px;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery-item,
+    .gallery-item.tall {
+        height: 400px;
+        transform: none;
+    }
+}

@@ -1,8 +1,3 @@
-/* ===================================================
-   portfolios.css — page-specific overrides
-   Inherits all shared styles from styles_diseno_web.css
-   =================================================== */
-
 /* Hero tint — slightly warmer/darker for portfolio mood */
 .hero-inner .hero-overlay {
     background: rgba(10, 10, 15, 0.72);

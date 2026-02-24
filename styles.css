@@ -498,6 +498,10 @@ strong {
     padding: 8rem 4rem;
 }
 
+.item-overlay .text-small {
+    font-size: 1.8rem;
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -511,7 +515,7 @@ strong {
     overflow: hidden;
     aspect-ratio: 4/5;
     /* Most items are 4:5 */
-    border-radius: 20px;
+    border-radius: 50px;
     cursor: pointer;
 }
 
@@ -591,6 +595,157 @@ strong {
     transform: translateY(0);
 }
 
+
+/* ================== REVIEWS ================== */
+.rewiews {
+    padding: 8rem 4rem;
+}
+
+.rewiews-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.rewiew-item {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.212);
+}
+
+.link-rewiew {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    transition: transform 0.5s var(--ease-out-expo) 0.1s;
+    /* Slight delay */
+}
+
+.rewiew-item:hover .link-rewiew {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.rewiew-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 80%;
+    width: 80%;
+}
+
+.rewiew-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+    transform: translateY(20px);
+    transition: transform 0.5s var(--ease-out-expo);
+    margin-bottom: 0.5rem;
+    margin-top: -50px;
+}
+
+.rewiew-info p {
+    max-width: 500px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: -0.06em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    /* Slight delay */
+}
+
+.comillas {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+}
+
+
+/* Adjust top margin of second row to keep grid tight */
+.rewiew-item:nth-child(n+4) {
+    margin-top: 2rem;
+}
+
+.rewiew-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s var(--ease-out-expo);
+}
+
+.rewiew-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Overlay for Title and Description */
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    /* opacity: ; */
+    transition: opacity 0.5s ease;
+}
+
+.rewiew-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay h4 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+    transform: translateY(20px);
+    transition: transform 0.5s var(--ease-out-expo);
+    margin-bottom: 0.5rem;
+}
+
+.item-overlay p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    transform: translateY(20px);
+    transition: transform 0.5s var(--ease-out-expo) 0.1s;
+    opacity: 0;
+    /* Slight delay */
+}
+
+.rewiew-item:hover .item-overlay p {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.rewiew-item:hover .item-overlay h4,
+.rewiew-item:hover .item-overlay p {
+    transform: translateY(0);
+}
+
 /* ================== FOOTER ================== */
 .footer {
     padding: 10rem 4rem 2rem;
@@ -599,6 +754,19 @@ strong {
     background-color: var(--bg-color);
     /* To ensure text is behind */
 }
+
+.footer-subtitle {
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    letter-spacing: -0.06em;
+    position: relative;
+    display: flex;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+    margin-bottom: 2rem;
+}
+
 
 .footer-top {
     display: flex;
@@ -828,6 +996,64 @@ strong {
     .item-overlay p {
         transform: none;
     }
+
+    .rewiews {
+        padding: 20px 10px;
+    }
+
+    .rewiews-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .rewiew-info h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        color: var(--text-primary);
+        transform: translateY(20px);
+        transition: transform 0.5s var(--ease-out-expo);
+        margin-bottom: 0.5rem;
+        margin-top: -50px;
+    }
+
+    .rewiew-info p {
+        max-width: 500px;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: -0.06em;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1rem;
+        /* Slight delay */
+    }
+
+    .link-rewiew {
+        font-family: var(--font-body);
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        letter-spacing: -0.05em;
+        transition: transform 0.5s var(--ease-out-expo) 0.1s;
+        /* Slight delay */
+    }
+
+    .comillas {
+        font-size: 4rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        color: var(--text-primary);
+    }
+
+
+
+
+
 
     .footer-top {
         flex-direction: column;

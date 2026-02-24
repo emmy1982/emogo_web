@@ -1,0 +1,74 @@
+/* ===================================================
+   portfolios.css — page-specific overrides
+   Inherits all shared styles from styles_diseno_web.css
+   =================================================== */
+
+/* Hero tint — slightly warmer/darker for portfolio mood */
+.hero-inner .hero-overlay {
+    background: rgba(10, 10, 15, 0.72);
+}
+
+/* Portfolio-specific accent on the methodology section number */
+.tipo-num {
+    color: rgba(255, 255, 255, 0.05);
+}
+
+.tipo-card:hover .tipo-num {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+/* Gallery items: slightly taller for portrait-heavy portfolio work */
+.gallery-item {
+    height: 580px;
+}
+
+/* Tall items stand even higher for visual rhythm */
+.gallery-item.tall {
+    height: 680px;
+    transform: translateY(-2.5rem);
+}
+
+/* Stronger overlay gradient so text reads well over bright portfolio shots */
+.gallery-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+/* Tag pill inside the gallery card — subtle glow on hover */
+.gallery-overlay .gallery-tag {
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.14em;
+}
+
+.gallery-item:hover .gallery-overlay .gallery-tag {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* CTA section — keep consistent with diseno_web */
+.cta-section h2 {
+    font-size: 5.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .gallery-item {
+        height: 450px;
+    }
+
+    .gallery-item.tall {
+        height: 450px;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery-item,
+    .gallery-item.tall {
+        height: 420px;
+        transform: none;
+    }
+
+    .cta-section h2 {
+        font-size: 3rem;
+    }
+}

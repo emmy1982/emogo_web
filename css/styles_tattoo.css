@@ -263,10 +263,14 @@
 .split-item-2 img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 3s var(--ease-out-expo);
     display: block;
     border-radius: 30px;
+}
+
+.tattoo-item-2 img:hover {
+    transform: scale(1.04);
 }
 
 .tattoo-split-item:hover img {
@@ -469,7 +473,7 @@
     }
 
     .tattoo-split-item img {
-        height: 280px;
+        height: 300px;
     }
 
     .tattoo-full {
@@ -495,5 +499,17 @@
 
     .cta-section {
         padding: 6rem 2rem;
+    }
+
+    .split-item-2 p {
+        display: none;
+    }
+
+    .tattoo-split-item p {
+        display: none;
+    }
+
+    .tattoo-featured-label {
+        display: none;
     }
 }

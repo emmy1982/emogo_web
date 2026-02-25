@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. Native Parallax Effect on Images
-    const parallaxImages = document.querySelectorAll('.portfolio-item img');
+    const parallaxImages = document.querySelectorAll('.portfolio-item img, .gallery-item img');
 
     window.addEventListener('scroll', () => {
         // Request animation frame for smooth performance

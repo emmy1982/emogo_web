@@ -196,7 +196,32 @@
     overflow: hidden;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    border-bottom: 2px solid var(--border-color);
     cursor: pointer;
+}
+
+/* Wrapper to allow elements (e.g. a link) to sit outside the clipped .gallery-item */
+.gallery-item-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-visit-web {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    align-self: flex-end;
+    padding: 0.25rem 0;
+}
+
+.cta-visit-web:hover {
+    color: var(--text-primary);
 }
 
 .gallery-item.tall {
@@ -207,7 +232,7 @@
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: contrast(0.75) grayscale(10%);
     transition: transform 2s var(--ease-out-expo), filter 1s ease;
 }
@@ -220,7 +245,7 @@
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 55%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.829) 0%, rgba(0, 0, 0, 0) 55%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

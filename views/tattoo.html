@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emogo | Proyecto Tattoo Studio</title>
+    <meta name="description"
+        content="Proyecto de diseño web para estudio de tatuajes. Portfolio inmersivo con enfoque en llamadas a la acción y galería de trabajos.">
+
+    <!-- Google Fonts: Syne and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS compartido -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles_tattoo.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section class="navbar-section">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Emogo Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-links">
+            <a href="../index.html#work" class="menu-link">Trabajo</a>
+            <a href="../index.html#services" class="menu-link">Servicios</a>
+            <a href="../index.html#studio" class="menu-link">Estudio</a>
+            <a href="../index.html#contact" class="menu-link btn-contact-overlay">Hablemos</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="tattoo-hero">
+            <div class="tattoo-hero-bg" style="background-image: url('../assets/img-tattoo_002.png')"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="tattoo-hero-content">
+                <p class="hero-breadcrumb reveal">
+                    <a href="../index.html">Inicio</a>
+                    <span>/</span>
+                    Proyectos
+                    <span>/</span>
+                    Tattoo Studio
+                </p>
+                <h1 class="tattoo-hero-title reveal">
+                    <span class="animacion_parpadeo">_</span>Tresmonos<br>Ink
+                </h1>
+                <div class="tattoo-hero-tags reveal">
+                    <span class="tag">Diseño Web</span>
+                    <span class="tag">Portfolio Visual</span>
+                    <span class="tag">Studio</span>
+                </div>
+            </div>
+
+            <div class="tattoo-scroll-hint reveal">
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Project Info Section -->
+        <section class="tattoo-info">
+            <div class="tattoo-info-grid">
+                <!-- Left: Description -->
+                <div class="tattoo-info-left reveal">
+                    <h2><span class="animacion_parpadeo">_</span>El Proyecto</h2>
+                    <p>
+                        Tresmonos Ink es un estudio de tatuajes con un estilo oscuro, artístico y muy personal.
+                        Necesitaban una presencia digital que transmitiera la misma intensidad y cuidado que ponen
+                        en cada pieza. El resultado es una web <strong>inmersiva, oscura y de alto impacto</strong>,
+                        centrada en mostrar el portfolio de trabajos y facilitar las reservas.
+                    </p>
+                    <p>
+                        El diseño prioriza las fotografías de los tatuajes como protagonistas, con tipografías de gran
+                        tamaño y una navegación limpia que no compite con el arte. Cada sección está pensada para
+                        <strong>guiar al visitante hacia la acción</strong>: ver trabajos, conocer al artista y reservar
+                        una cita.
+                    </p>
+                </div>
+
+                <!-- Right: Meta -->
+                <div class="tattoo-info-right reveal">
+                    <div class="tattoo-meta-item">
+                        <span class="meta-label">Cliente</span>
+                        <span class="meta-value">Tresmonos Ink</span>
+                    </div>
+                    <div class="tattoo-meta-item">
+                        <span class="meta-label">Sector</span>
+                        <span class="meta-value">Arte · Lifestyle</span>
+                    </div>
+                    <div class="tattoo-meta-item">
+                        <span class="meta-label">Servicios</span>
+                        <span class="meta-value">Diseño Web · Branding Digital</span>
+                    </div>
+                    <div class="tattoo-meta-item">
+                        <span class="meta-label">Año</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                    <a href="../index.html#contact" class="tattoo-cta-btn reveal">Quiero algo así ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Showcase Section -->
+        <section class="tattoo-showcase">
+            <div class="section-header reveal">
+                <h2><span class="animacion_parpadeo">_</span>Capturas del proyecto</h2>
+                <span class="section-count">.01</span>
+            </div>
+
+            <!-- Main Featured Image -->
+            <div class="tattoo-featured reveal">
+                <img src="../assets/img-tattoo_002.png" alt="Vista principal del sitio web Tresmonos Ink">
+                <div class="tattoo-featured-label">
+                    <span>Vista principal · Hero Section</span>
+                </div>
+            </div>
+
+            <!-- Two column images -->
+            <div class="tattoo-split reveal">
+                <div class="tattoo-split-item">
+                    <img src="../assets/img-zombie_001.png" alt="Sección de portfolio de tatuajes">
+                    <p>Galería de trabajos</p>
+                </div>
+                <div class="tattoo-split-grid">
+                    <div class="split-item-2">
+                        <img src="../assets/img-barberia.png" alt="Sección de contacto y reservas">
+                        <p>Contacto y reservas</p>
+                    </div>
+                    <div class="split-item-2">
+                        <img src="../assets/img-barberia.png" alt="Sección de contacto y reservas">
+                        <p>Contacto y reservas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full width image -->
+            <div class="tattoo-full reveal">
+                <img src="../assets/img-studio.png" alt="Vista móvil del sitio web Tresmonos Ink">
+                <div class="tattoo-featured-label">
+                    <span>Vista responsive · Mobile</span>
+                </div>
+            </div>
+            <a href="../index.html#contact" class="tattoo-cta-btn reveal">Visitar la web ↗</a>
+
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="tattoo-features">
+            <div class="section-header reveal">
+                <h2><span class="animacion_parpadeo">_</span>Lo que incluye</h2>
+                <span class="section-count">.02</span>
+            </div>
+            <div class="tattoo-features-grid">
+                <div class="tattoo-feature-item reveal">
+                    <span class="feature-num">01</span>
+                    <h3>Portfolio Visual</h3>
+                    <p>Galería immersiva con las fotografías de los trabajos como protagonistas absolutas de la
+                        experiencia.</p>
+                </div>
+                <div class="tattoo-feature-item reveal">
+                    <span class="feature-num">02</span>
+                    <h3>Reserva de Cita</h3>
+                    <p>Sistema de reservas integrado para que los clientes puedan pedir su cita directamente desde la
+                        web.</p>
+                </div>
+                <div class="tattoo-feature-item reveal">
+                    <span class="feature-num">03</span>
+                    <h3>Diseño Oscuro</h3>
+                    <p>Estética dark, editorial y premium. Cada elemento tipográfico y de color refuerza la identidad
+                        del estudio.</p>
+                </div>
+                <div class="tattoo-feature-item reveal">
+                    <span class="feature-num">04</span>
+                    <h3>Responsive Total</h3>
+                    <p>Experiencia perfecta en móvil, tablet y escritorio. El arte se ve igual de impactante en
+                        cualquier pantalla.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="reveal">
+                <span class="animacion_parpadeo">_</span>¿Tu proyecto<br>es el siguiente?
+            </h2>
+            <p class="reveal">
+                Cuéntanos en qué tipo de negocio estás y creamos<br>
+                juntos el diseño que tu marca merece.
+            </p>
+            <a href="../index.html#contact" class="btn-cta reveal">Hablemos del proyecto</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-top reveal">
+                <div class="footer-cta">
+                    <h2><span class="animacion_parpadeo">_</span>¿Listo para elevar<br>tu marca?</h2>
+                    <h3 class="footer-subtitle">Cuéntanos tu proyecto y creamos algo único</h3>
+                    <a href="mailto:hello@sensorial.studio" class="email-link">hello@sensorial.studio</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Emogo. All rights reserved.</p>
+            </div>
+            <div class="footer-bg-text">emogo</div>
+        </div>
+    </footer>
+
+    <!-- JS compartido -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

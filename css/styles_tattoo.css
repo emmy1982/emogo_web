@@ -1,0 +1,499 @@
+/* ================================================
+   TATTOO PROJECT PAGE - styles_tattoo.css
+   ================================================ */
+
+/* ================== HERO ================== */
+.tattoo-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8rem 4rem 6rem;
+    overflow: hidden;
+}
+
+.tattoo-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    transform: scale(1.05);
+    transition: transform 8s linear;
+    z-index: 0;
+}
+
+/* Override the global section styles for hero */
+.tattoo-hero.hero-loaded .tattoo-hero-bg {
+    transform: scale(1);
+}
+
+.tattoo-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-breadcrumb {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hero-breadcrumb a {
+    transition: color 0.3s ease;
+}
+
+.hero-breadcrumb a:hover {
+    color: var(--text-primary);
+}
+
+.tattoo-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 5vw, 5rem);
+    font-weight: 800;
+    line-height: 0.88;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+}
+
+.tattoo-hero-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tattoo-scroll-hint {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    z-index: 2;
+}
+
+.tattoo-scroll-hint .line {
+    width: 60px;
+    height: 1px;
+    background: var(--border-color);
+}
+
+/* ================== PROJECT INFO ================== */
+.tattoo-info {
+    padding: 8rem 4rem;
+}
+
+.tattoo-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.tattoo-info-left h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    margin-bottom: 2.5rem;
+}
+
+.tattoo-info-left p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.tattoo-info-left p strong {
+    color: var(--text-primary);
+    text-shadow: none;
+}
+
+.tattoo-info-right {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.tattoo-meta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 2rem;
+}
+
+.meta-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.meta-value {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+.tattoo-cta-btn {
+    display: inline-block;
+    margin-top: 3rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem 2.5rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.tattoo-cta-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    border-color: var(--text-primary);
+}
+
+/* ================== SHOWCASE ================== */
+.tattoo-showcase {
+    padding: 8rem 4rem;
+}
+
+/* Large featured screenshot */
+.tattoo-featured {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    aspect-ratio: 16/9;
+}
+
+.tattoo-featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 3s var(--ease-out-expo);
+}
+
+.tattoo-featured:hover img {
+    transform: scale(1.03);
+}
+
+.tattoo-featured-label {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background: rgba(22, 22, 24, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.tattoo-featured-label span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+}
+
+/* Two-column split screenshots */
+.tattoo-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.tattoo-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.tattoo-split-item {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tattoo-split-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 3s var(--ease-out-expo);
+    display: block;
+}
+
+.split-item-2 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 3s var(--ease-out-expo);
+    display: block;
+    border-radius: 30px;
+}
+
+.tattoo-split-item:hover img {
+    transform: scale(1.04);
+}
+
+.split-item-2 {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.split-item-2 p {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    background: rgba(22, 22, 24, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.tattoo-split-item p {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 1.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    background: rgba(22, 22, 24, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+}
+
+/* Full width bottom image */
+.tattoo-full {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    aspect-ratio: 21/9;
+}
+
+.tattoo-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 3s var(--ease-out-expo);
+}
+
+.tattoo-full:hover img {
+    transform: scale(1.03);
+}
+
+/* ================== FEATURES ================== */
+.tattoo-features {
+    padding: 8rem 4rem;
+}
+
+.tattoo-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin-top: 4rem;
+}
+
+.tattoo-feature-item {
+    padding: 3.5rem;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    transition: background 0.4s ease;
+}
+
+.tattoo-feature-item:nth-child(even) {
+    border-right: none;
+}
+
+.tattoo-feature-item:nth-child(3),
+.tattoo-feature-item:nth-child(4) {
+    border-bottom: none;
+}
+
+.tattoo-feature-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.feature-num {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--border-color);
+    line-height: 1;
+    display: block;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05em;
+}
+
+.tattoo-feature-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.tattoo-feature-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/* ================== CTA SECTION (shared) ================== */
+.cta-section {
+    padding: 10rem 4rem;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.cta-section p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    border: 1px solid var(--text-primary);
+    padding: 1.2rem 3.5rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+}
+
+/* ================== REVEAL ANIMATION ================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 900px) {
+    .tattoo-hero {
+        min-height: 70vh;
+        padding: 7rem 2rem 4rem;
+    }
+
+
+    .tattoo-hero-title {
+        font-size: clamp(1.6rem, 5vw, 8rem);
+    }
+
+    .tattoo-info {
+        padding: 5rem 2rem;
+    }
+
+    .tattoo-info-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .tattoo-showcase {
+        padding: 5rem 0.5rem;
+    }
+
+    .tattoo-split {
+        grid-template-columns: 1fr;
+    }
+
+    .tattoo-split-item img {
+        height: 280px;
+    }
+
+    .tattoo-full {
+        aspect-ratio: 4/3;
+    }
+
+    .tattoo-features {
+        padding: 5rem 2rem;
+    }
+
+    .tattoo-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tattoo-feature-item {
+        border-right: none;
+        padding: 2.5rem 0;
+    }
+
+    .tattoo-feature-item:nth-child(3) {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .cta-section {
+        padding: 6rem 2rem;
+    }
+}

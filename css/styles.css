@@ -1,8 +1,11 @@
 :root {
     --bg-color: #161618;
+    --bg-color-2: #f1f1f1;
     --linear-gradient: linear-gradient(180deg, #001172 0%, #0f29b9 100%);
     /* Casi negro profundo */
+    --text-black: #000000;
     --text-primary: #ffffff;
+    --text-primary-2: #474747;
     --text-secondary: #a1a1aa;
     /* Gris zinc para no cansar la vista */
     --border-color: rgba(255, 255, 255, 0.1);
@@ -21,7 +24,8 @@
 }
 
 body {
-    background: var(--bg-color);
+    background: var(--bg-color-2);
+    /* background: var(--bg-color); */
     color: var(--text-primary);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
@@ -40,11 +44,15 @@ a {
     text-decoration: none;
 }
 
-section {
+h2 {
+    color: var(--text-black);
+}
+
+/* section {
     background: var(--bg-color);
     border-radius: 50px;
     margin: 8px;
-}
+} */
 
 strong {
     color: var(--text-primary);
@@ -178,6 +186,9 @@ strong {
     position: relative;
     overflow: hidden;
     /* Prevent the circle from causing scrollbars */
+    background: var(--bg-color);
+    border-radius: 50px;
+    margin: 8px;
 }
 
 /* Hero Background Slider */
@@ -447,7 +458,7 @@ strong {
     justify-content: space-between;
     align-items: center;
     padding: 3.5rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid black;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
@@ -463,7 +474,7 @@ strong {
     font-weight: 500;
     line-height: 1;
     margin-bottom: 0.5rem;
-    color: var(--text-secondary);
+    color: black;
     transition: color 0.4s ease;
     text-transform: uppercase;
     letter-spacing: -0.03em;
@@ -479,7 +490,7 @@ strong {
 }
 
 .service-item:hover .service-info h3 {
-    color: var(--text-primary);
+    color: var(--text-primary-2);
 }
 
 .service-info p {
@@ -497,13 +508,13 @@ strong {
 
 .service-arrow {
     font-size: 2.5rem;
-    color: var(--text-secondary);
+    color: black;
     transition: transform 0.5s var(--ease-out-expo), color 0.4s ease;
 }
 
 .service-item:hover .service-arrow {
     transform: translate(15px, -15px);
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 /* ================== PORTFOLIO ================== */
@@ -517,32 +528,42 @@ strong {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-flow: dense;
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin-top: 4rem;
-    align-items: center;
 }
 
 .portfolio-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4/5;
-    /* Most items are 4:5 */
-    border-radius: 50px;
+    height: 600px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
-/* Make middle column items taller */
-.portfolio-item:nth-child(3n+2) {
-    aspect-ratio: 3.6/5;
-    transform: translateY(-2rem);
-    /* Slight offset for asymmetry */
+/* Grid span logic for 2fr 1fr 1fr (top) and 1fr 1fr 2fr (bottom) */
+.portfolio-item:nth-child(1) {
+    grid-column: span 2;
 }
 
-/* Adjust top margin of second row to keep grid tight */
-.portfolio-item:nth-child(n+4) {
-    margin-top: 2rem;
+.portfolio-item:nth-child(2) {
+    grid-column: span 1;
+}
+
+.portfolio-item:nth-child(3) {
+    grid-column: span 1;
+}
+
+.portfolio-item:nth-child(4) {
+    grid-column: span 1;
+}
+
+.portfolio-item:nth-child(5) {
+    grid-column: span 1;
+}
+
+.portfolio-item:nth-child(6) {
+    grid-column: span 2;
 }
 
 .portfolio-item img {
@@ -550,6 +571,7 @@ strong {
     height: 100%;
     object-fit: cover;
     transition: transform 2s var(--ease-out-expo);
+    filter: brightness(0.7);
     /* filter: contrast(0.7)grayscale(10%); */
 }
 
@@ -634,7 +656,7 @@ strong {
     overflow: hidden;
     border-radius: 50px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.212);
+    border: 1px solid black;
 }
 
 .link-rewiew {
@@ -667,7 +689,7 @@ strong {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -0.05em;
-    color: var(--text-primary);
+    color: black;
     transform: translateY(20px);
     transition: transform 0.5s var(--ease-out-expo);
     margin-bottom: 0.5rem;
@@ -676,11 +698,12 @@ strong {
 
 .rewiew-info p {
     max-width: 500px;
+    color: black;
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.6;
     letter-spacing: -0.06em;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid black;
     padding-bottom: 1rem;
     /* Slight delay */
 }
@@ -690,7 +713,7 @@ strong {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.05em;
-    color: var(--text-primary);
+    color: black;
 }
 
 
@@ -745,7 +768,7 @@ strong {
 .item-overlay p {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     line-height: 1.5;
     transform: translateY(20px);
     transition: transform 0.5s var(--ease-out-expo) 0.1s;
@@ -796,6 +819,7 @@ strong {
 
 .footer-cta h2 {
     font-family: var(--font-heading);
+    color: var(--text-primary);
     font-size: 5rem;
     font-weight: 500;
     line-height: 1.1;
@@ -896,15 +920,12 @@ strong {
 @media (max-width: 1024px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
-    .portfolio-item:nth-child(3n+2) {
-        aspect-ratio: 4/5;
-        transform: none;
-    }
-
-    .portfolio-item:nth-child(n+4) {
-        margin-top: 0;
+    .portfolio-item {
+        height: 400px;
+        grid-column: span 1 !important;
     }
 
     .hero-title {
@@ -918,8 +939,6 @@ strong {
 
 @media (max-width: 768px) {
     .navbar {
-        width: 96%;
-
         padding: 1.5rem 2rem;
     }
 
@@ -938,7 +957,8 @@ strong {
         height: 80vw;
         top: -15vh;
         right: -35vw;
-        opacity: 0.3;
+        opacity: 0.8;
+        display: none;
         /* Make it more subtle on mobile */
     }
 
@@ -947,7 +967,8 @@ strong {
         height: 79vw;
         top: -18vh;
         right: -40vw;
-        opacity: 0.3;
+        opacity: 0.7;
+        display: none;
         /* Make it more subtle on mobile */
     }
 
@@ -1006,6 +1027,20 @@ strong {
 
     .portfolio-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .portfolio-item {
+        height: 450px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 2s var(--ease-out-expo);
+        filter: brightness(1);
+        /* filter: contrast(0.7)grayscale(10%); */
     }
 
     .item-overlay {
@@ -1037,7 +1072,7 @@ strong {
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: -0.05em;
-        color: var(--text-primary);
+        color: var(--text-black);
         transform: translateY(20px);
         transition: transform 0.5s var(--ease-out-expo);
         margin-bottom: 0.5rem;
@@ -1070,7 +1105,7 @@ strong {
         font-weight: 900;
         text-transform: uppercase;
         letter-spacing: -0.05em;
-        color: var(--text-primary);
+        color: var(--text-black);
     }
 
 

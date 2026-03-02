@@ -55,6 +55,7 @@ h2 {
 } */
 
 strong {
+    font-weight: 500;
     color: var(--text-primary);
     text-shadow: 0 0 10px rgba(27, 27, 27, 0.938);
 }
@@ -247,10 +248,10 @@ strong {
     position: absolute;
     top: -8vw;
     right: -8vw;
-    width: 45vw;
-    height: 45vw;
-    max-width: 600px;
-    max-height: 600px;
+    width: 85vw;
+    height: 85vw;
+    max-width: 800px;
+    max-height: 800px;
     min-width: 300px;
     min-height: 300px;
     z-index: 2;
@@ -262,10 +263,10 @@ strong {
     position: absolute;
     top: -8vw;
     right: -8vw;
-    width: 30vw;
-    height: 30vw;
-    max-width: 520px;
-    max-height: 520px;
+    width: 85vw;
+    height: 85vw;
+    max-width: 710px;
+    max-height: 710px;
     min-width: 250px;
     min-height: 250px;
     z-index: 2;
@@ -352,9 +353,10 @@ strong {
 .hero-right {
     flex: 1;
     display: flex;
-    justify-content: right;
-    margin-bottom: 0;
-    margin-top: auto;
+    justify-content: left;
+    /* margin-bottom: 0; */
+    /* margin-top: auto; */
+    margin: auto 0;
 }
 
 .hero-title {
@@ -406,6 +408,7 @@ strong {
     width: 80px;
     height: 1px;
     background-color: var(--text-primary);
+    margin-right: 80px;
 }
 
 .animacion_parpadeo {
@@ -433,7 +436,15 @@ strong {
     align-items: center;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 4rem;
+}
+
+.section-header p {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: var(--text-black);
 }
 
 .section-header h2 {
@@ -442,6 +453,17 @@ strong {
     font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: -0.02em;
+    color: var(--text-black);
+}
+
+.description-title {
+    max-width: 500px;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: -0.06em;
+    color: var(--text-black);
 }
 
 .section-count {
@@ -970,6 +992,51 @@ strong {
     white-space: nowrap;
 }
 
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #128c7e;
+    box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 /* ================== ANIMATIONS ================== */
 .reveal {
     opacity: 0;
@@ -1052,7 +1119,16 @@ strong {
 
     .hero-title {
         font-size: 10vw;
-        margin-top: auto;
+        /* margin-top: auto; */
+        margin: auto 0;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: -0.04em;
+        display: flex;
+        flex-direction: column;
+        text-shadow: 0 0 10px rgb(27, 27, 27);
     }
 
     .hero-title .indent {

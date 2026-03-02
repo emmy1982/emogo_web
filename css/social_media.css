@@ -13,6 +13,10 @@
     transform: translateY(-2.5rem);
 }
 
+.display-none {
+    display: none;
+}
+
 /* Stronger gradient so text pops over colourful social media imagery */
 .gallery-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 58%);

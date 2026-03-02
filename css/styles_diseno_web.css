@@ -7,6 +7,7 @@
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
+    margin-top: -10px;
 }
 
 .hero-inner .hero-overlay {
@@ -94,7 +95,7 @@
 .proceso-intro p {
     font-size: 1.4rem;
     font-weight: 300;
-    color: var(--text-secondary);
+    color: var(--text-black);
     line-height: 1.7;
     letter-spacing: -0.03em;
 }
@@ -332,16 +333,16 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    border: 1px solid var(--text-primary);
-    color: var(--text-primary);
+    border: 1px solid var(--text-black);
+    color: var(--text-black);
     padding: 1.2rem 3.5rem;
     border-radius: 50px;
     transition: background 0.4s ease, color 0.4s ease;
 }
 
 .btn-cta:hover {
-    background: var(--text-primary);
-    color: var(--bg-color);
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
 }
 
 /* ===== RESPONSIVE ===== */

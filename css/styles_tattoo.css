@@ -201,6 +201,7 @@
     overflow: hidden;
     margin-bottom: 2rem;
     aspect-ratio: 16/9;
+    box-shadow: 0 0 10px rgba(27, 27, 27, 0.13);
 }
 
 .tattoo-featured img {
@@ -238,7 +239,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
-
 }
 
 .tattoo-split-grid {
@@ -253,6 +253,7 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 0 10px rgba(27, 27, 27, 0.13);
 }
 
 .tattoo-split-item img {
@@ -320,6 +321,7 @@
     border-radius: 20px;
     overflow: hidden;
     aspect-ratio: 21/9;
+    box-shadow: 0 0 10px rgba(27, 27, 27, 0.13);
 }
 
 .tattoo-full img {

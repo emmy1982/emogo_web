@@ -508,6 +508,25 @@ strong {
     color: var(--text-primary-2);
 }
 
+.arrow_look {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-black);
+    font-weight: 100;
+    letter-spacing: -0.02em;
+}
+
+.display-none {
+    display: none;
+}
+
+/* .arrow_look p {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+} */
+
 .service-info p {
     color: var(--text-secondary);
     font-size: 1.1rem;
@@ -655,6 +674,32 @@ strong {
 .portfolio-item:hover .item-overlay h4,
 .portfolio-item:hover .item-overlay p {
     transform: translateY(0);
+}
+
+.box-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    margin-top: 5rem;
+    border: 1px solid var(--text-black);
+    color: var(--text-black);
+    padding: 1.2rem 3.5rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+
+}
+
+.btn-ver-mas:hover {
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 
@@ -1127,6 +1172,61 @@ ul.politicas li::before {
     .service-info h3 {
         font-size: 3.5rem;
     }
+
+    .rewiews {
+        padding: 20px 10px;
+    }
+
+    .rewiews-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr, 1fr);
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .rewiew-info h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        color: var(--text-black);
+        transform: translateY(20px);
+        transition: transform 0.5s var(--ease-out-expo);
+        margin-bottom: 0.5rem;
+        margin-top: -50px;
+    }
+
+    .rewiew-info p {
+        max-width: 500px;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: -0.06em;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1rem;
+        /* Slight delay */
+    }
+
+    .link-rewiew {
+        font-family: var(--font-body);
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        letter-spacing: -0.05em;
+        transition: transform 0.5s var(--ease-out-expo) 0.1s;
+        /* Slight delay */
+    }
+
+    .comillas {
+        font-size: 4rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        color: var(--text-black);
+    }
+
+
 }
 
 @media (max-width: 768px) {
@@ -1220,6 +1320,10 @@ ul.politicas li::before {
 
     .footer {
         padding: 6rem 2rem;
+    }
+
+    .display-none {
+        display: block;
     }
 
     .service-item {

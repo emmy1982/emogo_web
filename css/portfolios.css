@@ -3,6 +3,10 @@
     background: rgba(10, 10, 15, 0.72);
 }
 
+.size-xl {
+    font-size: 2.1rem;
+}
+
 /* Portfolio-specific accent on the methodology section number */
 .tipo-num {
     color: rgba(255, 255, 255, 0.05);

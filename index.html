@@ -5,6 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Web Granada | Emogo</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Diseño Web en Granada. Creamos páginas web, portfolios y tiendas online profesionales para impulsar tu negocio. Empieza hoy con Emogo.">
+    <meta name="keywords" content="diseño web, granada, desarrollo web, ecommerce, portfolios, agencias, SEO">
+    <meta name="author" content="Emogo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.emogo.es/">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.emogo.es/">
+    <meta property="og:title" content="Diseño Web Granada | Emogo">
+    <meta property="og:description"
+        content="Diseño Web en Granada. Creamos páginas web, portfolios y tiendas online profesionales para impulsar tu negocio. Empieza hoy con Emogo.">
+    <meta property="og:image" content="https://www.emogo.es/assets/logo-redes.png">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.emogo.es/">
+    <meta property="twitter:title" content="Diseño Web Granada | Emogo">
+    <meta property="twitter:description"
+        content="Diseño Web en Granada. Creamos páginas web, portfolios y tiendas online profesionales para impulsar tu negocio. Empieza hoy con Emogo.">
+    <meta property="twitter:image" content="https://www.emogo.es/assets/logo-redes.png">
+
     <!-- Google Fonts: Syne and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -148,7 +173,10 @@
                         <h3>Diseño Web</h3>
                         <p>Diseños actuales, modernos y eficaces.</p>
                     </div>
-                    <span class="service-arrow">↗</span>
+                    <div class="arrow_look">
+                        <p class="display-none">Ver</p><span class="service-arrow">↗</span>
+                    </div>
+
                 </li>
                 <li class="service-item reveal" onclick="window.location.href='./views/portfolios.html'"
                     style="cursor:pointer;">
@@ -156,7 +184,9 @@
                         <h3>Portfolios</h3>
                         <p>Muestra quién eres y lo que sabes hacer de forma profesional.</p>
                     </div>
-                    <span class="service-arrow">↗</span>
+                    <div class="arrow_look">
+                        <p class="display-none">Ver</p><span class="service-arrow">↗</span>
+                    </div>
                 </li>
                 <li class="service-item reveal" onclick="window.location.href='./views/social_media.html'"
                     style="cursor:pointer;">
@@ -164,7 +194,9 @@
                         <h3>Social Media</h3>
                         <p>Potencia tus redes con imagenes que muestran lo mejor de tu negocio.</p>
                     </div>
-                    <span class="service-arrow">↗</span>
+                    <div class="arrow_look">
+                        <p class="display-none">Ver</p><span class="service-arrow">↗</span>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -180,7 +212,8 @@
                 <!-- Item 1 - Left -->
                 <div class="portfolio-item reveal" onclick="window.location.href='./views/tattoo.html'"
                     style="cursor:pointer;">
-                    <img src="./assets/tattoo-34.png" alt="Interior editorial style">
+                    <img src="./assets/tattoo-34.png" alt="Imagen de pagina de estudio de tatuajes" width="900"
+                        height="700">
                     <div class="item-overlay">
                         <h4>Tattoo</h4>
                         <p>Diseño web para estudio de tatuajes. Enfoque en llamadas a la acción y
@@ -192,7 +225,8 @@
                 <!-- Item 2 - Center -->
                 <div class="portfolio-item reveal" onclick="window.location.href='./views/construccion.html'"
                     style="cursor:pointer;">
-                    <img src="./assets/obras-34.png" alt="Fashion editorial">
+                    <img src="./assets/obras-34.png" alt="Imagen de pagina de empresa de reformas" width="900"
+                        height="700">
                     <div class="item-overlay">
                         <h4 class="text-small">Reformas</h4>
                         <p>Diseño web para empresa de reformas. Moderno y minimalista.</p>
@@ -203,7 +237,8 @@
                 <!-- Item 3 - Right -->
                 <div class="portfolio-item reveal" onclick="window.location.href='./views/zombie.html'"
                     style="cursor:pointer;">
-                    <img src="./assets/zombis-34.png">
+                    <img src="./assets/zombis-34.png" alt="Imagen de pagina de empresa de eventos" width="900"
+                        height="700">
                     <div class="item-overlay">
                         <h4>Zombie</h4>
                         <p>Diseño web para empresas de eventos. LLamativo e impactante.</p>
@@ -214,7 +249,7 @@
                 <!-- Item 4 - Left -->
                 <div class="portfolio-item reveal" onclick="window.location.href='./views/barber.html'"
                     style="cursor:pointer;">
-                    <img src="./assets/img-barberia.png">
+                    <img src="./assets/img-barberia.png" alt="Imagen de pagina de barberia" width="900" height="700">
                     <div class="item-overlay">
                         <h4>Barber</h4>
                         <p>Diseño web para barbería. Minimalista y moderno.</p>
@@ -226,7 +261,8 @@
                 <!-- Item 5 - Right -->
                 <div class="portfolio-item reveal" onclick="window.location.href='./views/infantil.html'"
                     style="cursor:pointer;">
-                    <img src="./assets/infantil-34.png" alt="Art editorial">
+                    <img src="./assets/infantil-34.png" alt="Imagen de pagina de asociacion infantil" width="900"
+                        height="700">
                     <div class="item-overlay">
                         <h4>Infantil</h4>
                         <p>Diseño web para asociacion infantil. Enfocado a la donación y voluntariado.</p>
@@ -237,13 +273,16 @@
                 <!-- Item 6 - Right -->
                 <div class="portfolio-item reveal" onclick="window.location.href='./views/moda.html'"
                     style="cursor:pointer;">
-                    <img src="./assets/modelo-34.png" alt="Editorial layout">
+                    <img src="./assets/modelo-34.png" alt="Imagen de pagina de portafolio" width="900" height="700">
                     <div class="item-overlay">
                         <h4 class="text-small">Portafolio</h4>
                         <p>Diseño web para portafolio. Galeria de trabajos.</p>
                         <span class="service-arrow">↗</span>
                     </div>
                 </div>
+            </div>
+            <div class="box-btn">
+                <a href="./views/diseno_web.html" class="btn-ver-mas reveal">VER MÁS</a>
             </div>
         </section>
     </main>

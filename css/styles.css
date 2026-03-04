@@ -60,6 +60,113 @@ strong {
     font-weight: 500;
 }
 
+/* ================== HERO ENTRANCE ANIMATIONS ================== */
+@keyframes heroFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroFadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroExpandLine {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes heroRevealChar {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) skewY(5deg);
+        filter: blur(4px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) skewY(0deg);
+        filter: blur(0);
+    }
+}
+
+/* Clases de animación — se aplican al cargar */
+.anim-navbar {
+    animation: heroFadeDown 0.9s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 0.1s;
+}
+
+.anim-line {
+    animation: heroExpandLine 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 0.5s;
+}
+
+.anim-title-1 {
+    display: inline-block;
+    animation: heroRevealChar 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 0.7s;
+}
+
+.anim-title-2 {
+    display: inline-block;
+    animation: heroRevealChar 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 0.9s;
+}
+
+.anim-title-3 {
+    display: inline-block;
+    animation: heroRevealChar 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 1.1s;
+}
+
+.anim-btn {
+    animation: heroFadeUp 0.9s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 1.4s;
+}
+
+.anim-bottom {
+    animation: heroFadeUp 0.9s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: 1.7s;
+}
+
+.anim-circular {
+    animation: heroFadeIn 1.5s ease both;
+    animation-delay: 1.2s;
+}
+
 /* ================== NAVBAR ================== */
 .navbar {
     position: fixed;
@@ -344,6 +451,32 @@ strong {
     /* margin-bottom: 0; */
     /* margin-top: auto; */
     margin: auto 0;
+}
+
+.btn-hero {
+    display: flex;
+    justify-content: left;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.light-btn {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    padding: 1rem 2.5rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.light-btn:hover {
+    background: white;
+    color: var(--bg-color);
 }
 
 .hero-title {

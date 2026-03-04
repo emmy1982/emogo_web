@@ -62,7 +62,7 @@
 <body>
     <!-- Navbar -->
     <section class="navbar-section">
-        <nav class="navbar">
+        <nav class="navbar anim-navbar">
             <div class="logo">
                 <a href="#home">
                     <img src="./assets/logo.png" alt="Logo">
@@ -107,7 +107,7 @@
             <div class="hero-overlay"></div>
 
             <!-- Circular Text Animation -->
-            <div class="circular-text">
+            <div class="circular-text anim-circular">
                 <svg viewBox="0 0 200 200">
                     <path id="circlePath" fill="none"
                         d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
@@ -118,7 +118,7 @@
                     </text>
                 </svg>
             </div>
-            <div class="circular-text2">
+            <div class="circular-text2 anim-circular">
                 <svg viewBox="0 0 200 200">
                     <path id="circlePath" fill="none"
                         d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
@@ -130,20 +130,24 @@
                 </svg>
             </div>
 
-            <div class="hero-top-line"></div>
+            <div class="hero-top-line anim-line"></div>
             <div class="hero-content">
                 <!-- <div class="hero-left">
                     <p class="hero-subtitle"><span class="animacion_parpadeo">_</span>Diseño Web</p>
                 </div> -->
                 <div class="hero-right">
                     <h1 class="hero-title">
-                        <span class="title-h1"><span class="animacion_parpadeo">_</span>DISEÑO WEB</span>
-                        <span class="indent">QUE IMPULSA</span>
-                        <span>TU NEGOCIO</span>
+                        <span class="title-h1 anim-title-1"><span class="animacion_parpadeo">_</span>DISEÑO WEB</span>
+                        <span class="indent anim-title-2">QUE IMPULSA</span>
+                        <span class="anim-title-3">TU NEGOCIO</span>
                     </h1>
                 </div>
+
             </div>
-            <div class="hero-bottom">
+            <div class="btn-hero anim-btn">
+                <a href="#contact" class="light-btn">Solicitar presupuesto</a>
+            </div>
+            <div class="hero-bottom anim-bottom">
                 <p class="hero-description">Creación de <strong>páginas web</strong>,
                     <strong>portfolios
                         profesionales</strong> e
@@ -164,7 +168,7 @@
                 <p><span class="animacion_parpadeo">_</span>¿Qué hacemos?</p>
                 <span class="section-count">.01</span>
             </div>
-            <h2 class="description-title">Creamos <span>experiencias digitales,</span> Diseño Web en Granada</h2>
+            <h2 class="description-title reveal">Creamos <span>experiencias digitales,</span> Diseño Web en Granada</h2>
 
             <ul class="services-list">
                 <li class="service-item reveal" onclick="window.location.href='./views/diseno_web.html'"

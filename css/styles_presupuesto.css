@@ -1,0 +1,309 @@
+/* ========== PAGE LAYOUT ========== */
+body {
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+/* ========== PRESUPUESTO SPLIT ========== */
+.presupuesto-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* LEFT PANEL — imagen fija */
+.presupuesto-left {
+    position: relative;
+    overflow: hidden;
+}
+
+.presupuesto-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.65);
+}
+
+.presupuesto-left-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(22, 22, 24, 0.6) 0%, rgba(22, 22, 24, 0.2) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+}
+
+.presupuesto-left-tag {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+.presupuesto-left-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.presupuesto-left-title span {
+    display: block;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.presupuesto-left-desc {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    max-width: 380px;
+    font-weight: 300;
+}
+
+/* RIGHT PANEL — formulario */
+.presupuesto-right {
+    background: var(--bg-color-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 4rem;
+    overflow-y: auto;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+}
+
+.form-header-tag {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.form-header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--text-black);
+    text-transform: uppercase;
+}
+
+.form-header p {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ========== FORM STYLES ========== */
+.presupuesto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-black);
+}
+
+.form-group label .required {
+    color: #e44;
+    margin-left: 2px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-black);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--text-black);
+    box-shadow: 0 0 0 3px rgba(22, 22, 24, 0.08);
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+    line-height: 1.6;
+}
+
+/* Radio group */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    accent-color: var(--text-black);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.radio-option span {
+    font-size: 0.9rem;
+    color: var(--text-black);
+    font-weight: 300;
+}
+
+/* Divider */
+.form-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 0.5rem 0;
+}
+
+/* Submit button */
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    background: var(--text-black);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 1.1rem 3rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Feedback messages */
+.form-feedback {
+    display: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.form-feedback.success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #15803d;
+}
+
+.form-feedback.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #b91c1c;
+}
+
+/* Footer override */
+.footer {
+    background: var(--bg-color);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .presupuesto-page {
+        grid-template-columns: 1fr;
+    }
+
+    .presupuesto-left {
+        height: 50vh;
+        min-height: 320px;
+    }
+
+    .presupuesto-right {
+        padding: 3rem 2rem 4rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+}

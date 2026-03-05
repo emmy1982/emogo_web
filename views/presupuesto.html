@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Presupuesto | Emogo Diseño Web Granada</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Solicita tu presupuesto de diseño web en Granada. Cuéntanos tu proyecto y te enviamos un presupuesto personalizado sin compromiso.">
+    <meta name="keywords" content="presupuesto diseño web, granada, presupuesto página web, solicitar presupuesto web">
+    <meta name="author" content="Emogo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.emogo.es/views/presupuesto.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.emogo.es/views/presupuesto.html">
+    <meta property="og:title" content="Solicitar Presupuesto | Emogo">
+    <meta property="og:description" content="Solicita tu presupuesto de diseño web sin compromiso.">
+    <meta property="og:image" content="https://www.emogo.es/assets/logo-redes.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles_presupuesto.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section class="navbar-section">
+        <nav class="navbar anim-navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Emogo Logo">
+                </a>
+            </div>
+            <!-- Hamburger Menu Button -->
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-links">
+            <a href="../index.html#home" class="menu-link">Inicio</a>
+            <a href="../index.html#services" class="menu-link">Servicios</a>
+            <a href="../index.html#work" class="menu-link">Proyectos</a>
+            <a href="https://www.instagram.com/emogo_dev/" target="_blank" class="menu-link">Instagram</a>
+            <a href="../index.html#contact" class="menu-link btn-contact-overlay">Hablemos</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="presupuesto-page">
+
+            <!-- LEFT: imagen + texto editorial -->
+            <div class="presupuesto-left">
+                <img src="../assets/img-studio.png" alt="Diseño web Granada — Emogo">
+                <div class="presupuesto-left-overlay">
+                    <p class="presupuesto-left-tag"><span class="animacion_parpadeo">_</span> Emogo · Granada</p>
+                    <h2 class="presupuesto-left-title">
+                        Tu proyecto,
+                        <span>nuestro diseño.</span>
+                    </h2>
+                    <p class="presupuesto-left-desc">
+                        Cuéntanos tu idea y te asesoramos, sin compromiso.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RIGHT: formulario -->
+            <div class="presupuesto-right">
+                <div class="form-header">
+                    <p class="form-header-tag"><span class="animacion_parpadeo">_</span> Solicitud</p>
+                    <h1>Solicitar<br>Presupuesto</h1>
+                    <p>Rellena el formulario y te contactamos lo antes posible con una propuesta adaptada a tu negocio.
+                    </p>
+                </div>
+
+                <form class="presupuesto-form" id="presupuestoForm" novalidate>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellidos <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono <span class="required">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa / Negocio</label>
+                            <input type="text" id="empresa" name="empresa"
+                                placeholder="Nombre de tu empresa (opcional)">
+                        </div>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tipo_web">¿Qué tipo de web necesitas? <span class="required">*</span></label>
+                            <select id="tipo_web" name="tipo_web" required>
+                                <option value="" disabled selected>— Seleccionar —</option>
+                                <option value="Landing Page">Landing Page</option>
+                                <option value="Web Corporativa">Web Corporativa</option>
+                                <option value="Portfolio Profesional">Portfolio Profesional</option>
+                                <option value="No lo sé aún">No lo sé aún</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="presupuesto_aprox">Presupuesto aproximado</label>
+                            <select id="presupuesto_aprox" name="presupuesto_aprox">
+                                <option value="" disabled selected>— Seleccionar —</option>
+                                <option value="Menos de 500€">Menos de 500€</option>
+                                <option value="500€ – 1.000€">500€ – 1.000€</option>
+                                <option value="1.000€ – 2.500€">1.000€ – 2.500€</option>
+                                <option value="No lo sé aún">No lo sé aún</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="logo">¿Necesitas logo corporativo? <span class="required">*</span></label>
+                            <select id="logo" name="logo" required>
+                                <option value="" disabled selected>— Seleccionar —</option>
+                                <option value="Sí, necesito logo">Sí, necesito logo</option>
+                                <option value="No, ya tengo logo">No, ya tengo logo</option>
+                                <option value="Quizás, me lo pensaré">Quizás, me lo pensaré</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="seo">¿Necesitas posicionamiento SEO? <span class="required">*</span></label>
+                            <select id="seo" name="seo" required>
+                                <option value="" disabled selected>— Seleccionar —</option>
+                                <option value="Sí, quiero SEO">Sí, quiero SEO</option>
+                                <option value="No por ahora">No por ahora</option>
+                                <option value="No sé qué es el SEO">No sé qué es el SEO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Cuéntanos tu proyecto <span class="required">*</span></label>
+                        <textarea id="mensaje" name="mensaje"
+                            placeholder="Describe brevemente tu negocio y qué necesitas conseguir con tu nueva web..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <div class="form-group">
+                        <label>¿Cómo nos conociste?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="como_conociste" value="Google / Buscadores">
+                                <span>Buscadores</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="como_conociste" value="Instagram">
+                                <span>Instagram</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="como_conociste" value="Sitio Web">
+                                <span>Sitio Web</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="como_conociste" value="Redes Sociales">
+                                <span>Redes Sociales</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="como_conociste" value="Recomendación">
+                                <span>Recomendación</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Feedback messages -->
+                    <div class="form-feedback success" id="feedbackSuccess">
+                        ✅ ¡Mensaje enviado! Te contactamos en menos de 24h.
+                    </div>
+                    <div class="form-feedback error" id="feedbackError">
+                        ❌ Hubo un problema al enviar. Inténtalo de nuevo o escríbenos a <strong>emogo.design@gmail.com</strong>.
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="btnSubmit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        Enviar solicitud
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-top reveal">
+                <div class="footer-cta">
+                    <h2><span class="animacion_parpadeo">_</span>¿Listo para impulsar<br>tu negocio?</h2>
+                    <h3 class="footer-subtitle">Creación de páginas web <br>Cuéntanos tu proyecto y creamos algo único
+                    </h3>
+                    <a href="mailto:emogo.design@gmail.com" class="email-link">emogo.design@gmail.com</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/emogo_dev/" target="_blank">Instagram</a>
+                    <a href="https://wa.me/34657437142" target="_blank">Whatsapp</a>
+                </div>
+            </div>
+
+            <div class="footer-links-grid reveal">
+                <div class="footer-col">
+                    <h4>Navegar</h4>
+                    <ul>
+                        <li><a href="../index.html#home">Inicio</a></li>
+                        <li><a href="../index.html#work">Proyectos</a></li>
+                        <li><a href="../index.html#services">Servicios</a></li>
+                        <li><a href="../index.html#contact">Hablemos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="diseno_web.html">Diseño Web</a></li>
+                        <li><a href="portfolios.html">Portfolios Profesionales</a></li>
+                        <li><a href="social_media.html">Social Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Conectar</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/emogo_dev/">Instagram</a></li>
+                        <li><a href="https://wa.me/34657437142">WhatsApp</a></li>
+                        <li><a href="tel:+34657437142">Teléfono</a></li>
+                        <li><a href="mailto:emogo.design@gmail.com">Enviar Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="politica_privacidad.html">Política de privacidad</a></li>
+                        <li><a href="aviso_legal.html">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Emogo Diseño Web. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-bg-text">emogo</div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/34657437142" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.6-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.6-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.8 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <!-- JS compartido -->
+    <script src="../js/script.js"></script>
+    <!-- EmailJS Form Handler -->
+    <script src="../js/presupuesto.js"></script>
+</body>
+
+</html>

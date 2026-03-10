@@ -1650,3 +1650,29 @@ ul.politicas li::before {
         margin-bottom: 1.5rem;
     }
 }
+
+/* Tablet Landscape Fix */
+@media (min-width: 769px) and (max-width: 1280px) and (orientation: landscape) {
+
+    .circular-text,
+    .circular-text2 {
+        display: none !important;
+    }
+
+    .hero-title {
+        font-family: var(--font-heading);
+        font-size: 6vw;
+        font-weight: 700;
+        line-height: 0.9;
+        text-transform: uppercase;
+        letter-spacing: -0.04em;
+        display: flex;
+        flex-direction: column;
+        text-shadow: 0 0 10px rgb(27, 27, 27);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}

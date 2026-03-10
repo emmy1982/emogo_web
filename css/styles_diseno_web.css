@@ -236,7 +236,7 @@
     object-fit: contain;
     filter: contrast(0.75) grayscale(10%);
 
-    transition: transform 2s var(--ease-out-expo), filter 1s ease;
+    transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1), filter 1s ease;
 }
 
 
@@ -266,7 +266,7 @@
     color: var(--text-primary);
     margin-bottom: 0.4rem;
     transform: translateY(20px);
-    transition: transform 0.5s var(--ease-out-expo);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .gallery-overlay .gallery-tag {
@@ -275,7 +275,7 @@
     letter-spacing: 0.12em;
     opacity: 0;
     transform: translateY(15px);
-    transition: opacity 0.4s ease 0.1s, transform 0.5s var(--ease-out-expo) 0.1s;
+    transition: opacity 0.4s ease 0.1s, transform 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
 }
 
 .gallery-overlay h4.text-small {
@@ -289,7 +289,7 @@
     margin-top: 0.5rem;
     opacity: 0;
     transform: translateY(15px);
-    transition: opacity 0.4s ease 0.15s, transform 0.5s var(--ease-out-expo) 0.15s;
+    transition: opacity 0.4s ease 0.15s, transform 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
 }
 
 .gallery-item:hover .gallery-overlay h4,
@@ -443,7 +443,7 @@
         height: 100%;
         object-fit: contain;
         filter: contrast(0.75) grayscale(10%);
-        transition: transform 2s var(--ease-out-expo), filter 1s ease;
+        transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1), filter 1s ease;
     }
 
     .gallery-item.tall {

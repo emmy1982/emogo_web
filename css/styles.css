@@ -498,6 +498,11 @@ strong {
     color: var(--bg-color);
 }
 
+.light-btn:hover .inline-arrow,
+.dark-btn:hover .inline-arrow {
+    transform: translate(2px, -2px);
+}
+
 .dark-btn:hover {
     background: rgb(255, 255, 255);
     color: var(--bg-color);

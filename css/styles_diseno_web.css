@@ -222,7 +222,7 @@
 }
 
 .cta-visit-web:hover {
-    color: var(--text-primary);
+    color: black;
 }
 
 .gallery-item.tall {
@@ -344,8 +344,8 @@
 }
 
 .btn-cta:hover {
-    border-color: var(--text-secondary);
-    color: var(--text-secondary);
+    color: white;
+    background-color: black;
 }
 
 /* ===== RESPONSIVE ===== */
